@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Timer : MonoBehaviour
 
     static float timer;
 
-    
+    public static float timeLimit;
 
     static TextMeshProUGUI timerText;
 
@@ -21,6 +22,8 @@ public class Timer : MonoBehaviour
         ElliotsMain.roundActive = true;
 
         timer = 60;
+
+        timeLimit = 60;
         
 
     }
@@ -41,14 +44,24 @@ public class Timer : MonoBehaviour
         
         }
 
-        if(timer >= 0) 
+        if(timer <= 0) 
         {
-        
-            //lose();
+
+            Defeat();
         
         }
 
         showTime();
+
+    }
+
+   public static void resetTimer() 
+    {
+
+        timer = timeLimit;
+
+
+
 
     }
 
@@ -61,6 +74,12 @@ public class Timer : MonoBehaviour
         
 
         timerText.text = timer.ToString("F2");
+    }
+
+    static void Defeat()
+    {
+        SceneManager.LoadScene("Defeat");
+
     }
 
 }

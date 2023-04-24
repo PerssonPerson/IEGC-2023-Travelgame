@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ElliotsMain : MonoBehaviour
 {
     static int roundNum;
@@ -17,8 +18,13 @@ public class ElliotsMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        if (Input.GetKeyDown(KeyCode.Space))
+       {
+
+            newRound();
+
+        }
 
 
 
@@ -32,12 +38,16 @@ public class ElliotsMain : MonoBehaviour
         {
 
 
-
-
+            Timer.timeLimit -= 2;
 
 
         }
 
+        Timer.resetTimer();
+
     }
+
+    
+
 
 }
