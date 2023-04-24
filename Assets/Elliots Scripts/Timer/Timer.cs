@@ -44,14 +44,14 @@ public class Timer : MonoBehaviour
         
         }
 
-        if(timer <= 0) 
+        /*if(timer <= 0) 
         {
 
             Defeat();
         
-        }
+        }*/
 
-        showTime();
+        ShowTime();
 
     }
 
@@ -61,11 +61,10 @@ public class Timer : MonoBehaviour
         timer = timeLimit;
 
 
-
-
     }
 
-    static void showTime() 
+
+    static void ShowTime() 
     {
 
 
@@ -76,8 +75,10 @@ public class Timer : MonoBehaviour
         timerText.text = timer.ToString("F2");
     }
 
-    static void Defeat()
+    public static void Defeat()
     {
+        ElliotsMain.endRound();
+
         SceneManager.LoadScene("Defeat");
 
     }

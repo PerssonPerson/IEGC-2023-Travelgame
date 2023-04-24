@@ -19,19 +19,38 @@ public class ElliotsMain : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E)) //placeholder for enter train
        {
 
             newRound();
 
         }
 
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+        
+            
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.T)) //placeholder for time is out
+        {
+
+            Timer.Defeat();
+
+        }
 
 
     }
 
     static void newRound() 
     {
+        roundActive = false;
+
+
+
+        
+
         roundNum++;
 
         if (roundNum % 2 == 0 && roundNum != 0 && roundNum! > 20) //Modulus Operator: true if roundNum is evenly divisible by 2. 20 is a temporary value 
@@ -43,11 +62,18 @@ public class ElliotsMain : MonoBehaviour
 
         }
 
-        Timer.resetTimer();
 
+        roundActive = true;
     }
 
-    
+    public static void endRound() 
+    {
+
+        Timer.resetTimer();
+
+
+        roundActive = false;
+    }
 
 
 }
