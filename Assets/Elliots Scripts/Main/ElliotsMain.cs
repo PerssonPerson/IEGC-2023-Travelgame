@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class ElliotsMain : MonoBehaviour
 {
     static int roundNum;
 
     public static bool roundActive;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class ElliotsMain : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)) //placeholder for enter train
        {
 
-            newRound();
+            NewRound();
 
         }
 
@@ -43,7 +47,7 @@ public class ElliotsMain : MonoBehaviour
 
     }
 
-    static void newRound() 
+    static void NewRound() 
     {
         roundActive = false;
 
@@ -66,10 +70,10 @@ public class ElliotsMain : MonoBehaviour
         roundActive = true;
     }
 
-    public static void endRound() 
+    public static void EndRound() 
     {
 
-        Timer.resetTimer();
+        Timer.ResetTimer();
 
 
         roundActive = false;
