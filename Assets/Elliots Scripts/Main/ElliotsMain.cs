@@ -44,6 +44,12 @@ public class ElliotsMain : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.R)) 
+        {
+
+            //ItemSystem.Restart();
+        
+        }
 
     }
 
