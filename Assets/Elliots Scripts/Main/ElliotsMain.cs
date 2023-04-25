@@ -10,7 +10,8 @@ public class ElliotsMain : MonoBehaviour
 
     public static bool roundActive;
 
-
+    [SerializeField]
+    GameObject manager;
 
 
     // Start is called before the first frame update
@@ -44,6 +45,12 @@ public class ElliotsMain : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.R)) 
+        {
+
+            ItemSystem.Restart();
+        
+        }
 
     }
 
@@ -66,6 +73,9 @@ public class ElliotsMain : MonoBehaviour
 
         }
 
+        Timer.ResetTimer();
+
+          //GameObject.Find("GameManager2").ShowUI();
 
         roundActive = true;
     }
