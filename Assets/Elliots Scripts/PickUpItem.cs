@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PickUpItem : MonoBehaviour
 {
 
-    string itemCollided;
-
-    List<string> items = new List<string>();
 
 
 
@@ -25,39 +23,12 @@ public class PickUpItem : MonoBehaviour
         "Item8",
     };*/
 
-    List<string> itemsNeeded;
-
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        items.Add("Item0");
-
-        items.Add("item1");
-
-        items.Add("Item2");
-
-        items.Add("item3");
-
-        items.Add("Item4");
-
-        items.Add("item5");
-
-        items.Add("Item6");
-
-        items.Add("item7");
-
-        items.Add("Item8");
-
-        itemsNeeded = new List<string>();
-
-        itemsNeeded.Add("item2");
-
-        itemsNeeded.Add("Item4");
-
-        itemsNeeded.Add("item5");
-
-        itemsNeeded.Add("Item8");
+      
 
     }
 
@@ -75,9 +46,7 @@ public class PickUpItem : MonoBehaviour
         if (collision.gameObject.tag == "Item")
         {
 
-            itemCollided = collision.gameObject.name;
-
-            itemsNeeded.Remove(itemCollided);
+            ItemSystem.PickUp(collision.gameObject.name);
 
             Destroy(collision.gameObject);
 
