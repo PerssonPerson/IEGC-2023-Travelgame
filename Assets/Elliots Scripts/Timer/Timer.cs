@@ -77,7 +77,7 @@ public class Timer : MonoBehaviour
 
     public static void Defeat()
     {
-        ElliotsMain.endRound();
+        ElliotsMain.EndRound();
 
         SceneManager.LoadScene("Defeat");
 
