@@ -8,6 +8,8 @@ public class Handler : MonoBehaviour
     [SerializeField]
     List<GameObject> items;
     List<string> itemNames = new List<string>();
+    [SerializeField]
+    List<GameObject> locations;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +18,14 @@ public class Handler : MonoBehaviour
     public void GenerateList()
     {
         List<GameObject> addedObjects = new List<GameObject>();
-        for(int i = 0; i <= 8; i++)
+        for(int i = 0; i < 5; i++)
         {
             int index = Random.Range(0, items.Count);
             itemNames.Add("item" + index);
             GameObject spawnObject = items[index];
             addedObjects.Add(spawnObject);
         }
-        gameObject.GetComponent<GenerateStuff>().GenerateObjects(addedObjects);
+        gameObject.GetComponent<GenerateStuff>().GenerateObjectLocations(addedObjects, locations);
     }
     public void UpdateList()
     {
