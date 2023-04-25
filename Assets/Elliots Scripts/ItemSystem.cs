@@ -58,6 +58,9 @@ public class ItemSystem : MonoBehaviour
     {
 
     }
+
+
+
     public void ShowUI()
     {
         itemsNeeded = new List<int>();
@@ -113,11 +116,11 @@ public class ItemSystem : MonoBehaviour
 
         itemsNeeded.Remove(int.Parse(itemCollided.Split('_')[1]));
 
-        Debug.Log(itemsNeeded);
+        
 
     }
 
-    /*public static void Restart() 
+    public static void Restart() 
     {
 
         GameObject[] itemImages = GameObject.FindGameObjectsWithTag("ImgItem");
@@ -130,5 +133,5 @@ public class ItemSystem : MonoBehaviour
         
 
     
-    }*/
+    }
 }
