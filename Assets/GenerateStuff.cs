@@ -22,6 +22,18 @@ public class GenerateStuff : MonoBehaviour
     {
 
     }
+    public void GenerateObjectLocations(List<GameObject> Objects, List<GameObject> locations)
+    {
+        System.Random rand = new System.Random();
+        List<int> listNumbers = new List<int>();
+        listNumbers.AddRange(Enumerable.Range(1, locations.Count - 1).OrderBy(i => rand.Next()).Take(Objects.Count));
+        for(int i = 0; i < Objects.Count; i++)
+        {
+            GameObject instance = Instantiate(Objects[i]);
+            instance.transform.position = locations[i].transform.position;
+        }
+
+    }
     public void GenerateObjects(List<GameObject> Objects)
     {
         Vectors = new Vector2[(int)((Platform.transform.localScale.x / 1.5f) * (Platform.transform.localScale.z / 1.5f))];
