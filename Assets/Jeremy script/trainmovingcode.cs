@@ -21,20 +21,12 @@ public class trainmovingcode : MonoBehaviour
         if(gameObject.transform.position.x < 0) //Makes the movement stop when x reaches a number lower than 0.
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-
-           
-
         }
-
-
-        Invoke("DelayedMovementTrain", 40); //The amound of seconds delaying the actions below
+        Invoke("DelayedMovementTrain", 20); //The amound of seconds delaying the actions below
     }
     private void DelayedMovementTrain()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime); //starts to move again after the seconds have passed
-
     }
-    
-    
     }
 
