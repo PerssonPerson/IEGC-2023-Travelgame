@@ -323,7 +323,6 @@ GameObject:
   - component: {fileID: 565097802}
   - component: {fileID: 565097801}
   - component: {fileID: 565097800}
-  - component: {fileID: 565097804}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -407,19 +406,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &565097804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565097799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abd09fd1ecfacc499fce8f8e6236921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scenename: TestSceneLoad
 --- !u!1 &1524982642
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +502,7 @@ GameObject:
   - component: {fileID: 1647714511}
   - component: {fileID: 1647714510}
   - component: {fileID: 1647714509}
+  - component: {fileID: 1647714514}
   m_Layer: 0
   m_Name: train
   m_TagString: Untagged
@@ -612,6 +599,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1647714514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647714508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a523fbed05099da43b02685248963214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2000811463
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f657731e3774f4a9eb2d04fbd23355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plane: {fileID: 0}
   movespeed: 5
   rigidbody: {fileID: 2000811465}
 --- !u!54 &2000811465
